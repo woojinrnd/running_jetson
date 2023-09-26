@@ -1,0 +1,38 @@
+source /opt/ros/noetic/setup.bash
+
+alias camera0='v4l2-ctl -d /dev/video0 --set-ctrl=brightness=128;
+              v4l2-ctl -d /dev/video0 --set-ctrl=exposure_auto=1;
+	      v4l2-ctl -d /dev/video0 --set-ctrl=exposure_absolute=250;
+	      v4l2-ctl -d /dev/video0 --set-ctrl=white_balance_temperature_auto=0;
+	      v4l2-ctl -d /dev/video0 --set-ctrl=focus_auto=0;'
+	      
+alias camera1='v4l2-ctl -d /dev/video1 --set-ctrl=brightness=128;
+              v4l2-ctl -d /dev/video1 --set-ctrl=exposure_auto=1;
+	      v4l2-ctl -d /dev/video1 --set-ctrl=exposure_absolute=250;
+	      v4l2-ctl -d /dev/video1 --set-ctrl=white_balance_temperature_auto=0;
+	      v4l2-ctl -d /dev/video1 --set-ctrl=focus_auto=0;'
+	      
+alias camera2='v4l2-ctl -d /dev/video2 --set-ctrl=brightness=128;
+              v4l2-ctl -d /dev/video2 --set-ctrl=exposure_auto=1;
+	      v4l2-ctl -d /dev/video2 --set-ctrl=exposure_absolute=250;
+	      v4l2-ctl -d /dev/video2 --set-ctrl=white_balance_temperature_auto=0;
+	      v4l2-ctl -d /dev/video2 --set-ctrl=focus_auto=0;'
+	      
+alias camera3='v4l2-ctl -d /dev/video2 --set-ctrl=brightness=128;
+              v4l2-ctl -d /dev/video2 --set-ctrl=exposure_auto=1;
+	      v4l2-ctl -d /dev/video2 --set-ctrl=exposure_absolute=250;
+	      v4l2-ctl -d /dev/video2 --set-ctrl=white_balance_temperature_auto=0;
+	      v4l2-ctl -d /dev/video2 --set-ctrl=focus_auto=0;'
+	      
+alias eb='sudo gedit ~/.bashrc'
+alias sb='source ~/.bashrc'
+alias sds='source devel/setup.bash'
+alias cm='catkin_make'
+
+alias run_cam='cd ~/dynamixel_current/dynamixel_current_2port&&sds&&rosrun dynamixel_current_2port Move_decision_node'
+alias run_mot='cd ~/dynamixel_current/dynamixel_current_2port&&sds&&rosrun dynamixel_current_2port dynamixel_current_2port'
+alias run_fsr='rosrun rosserial_python serial_node.py _port:=/dev/ttyACM0 _baud:=57600'
+alias run_imu='cd ~/xsense&&sds&&roslaunch xsens_mti_driver xsens_mti_node.launch'
+
+alias run_cam2='cd ~/running2&&sds&&rosrun dynamixel_current_2port Move_decision_node'
+alias run_mot2='cd ~/running2&&sds&&rosrun dynamixel_current_2port dynamixel_current_2port'
